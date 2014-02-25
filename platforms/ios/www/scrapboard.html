@@ -1,0 +1,210 @@
+     $.each(data.tcontent, function(i, item) {
+      if(item.Name=='Septicaemia'){
+         $.each(item.Variations, function(j, subitem) {
+          info += subitem.condition + subitem.organisms + subitem.antimicrobial + subitem.alternative + subitem.comments
+    });
+     $(info).appendTo(".menu");
+     //alert(toc)
+   };
+ });
+
+
+
+<!--This is the original page body code --> 
+    <body style="background-color:#ACD1E9;">
+        <div class="landing">
+            <h1>Connolly Hospital Antimicrobial Application</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <a href = "welcome.html" style="text-decoration: none">
+                    <p class="event received">Enter Here</p>
+                </a>
+
+            </div>
+        </div>      
+
+    </body>
+
+        </head>
+
+<!--This is the original welcome.html code --> 
+  <script type="text/javascript">
+ 
+ $(function (){
+    var imp = "Json/contents.json"
+ $.getJSON(imp, function(data) {
+    var toc = "<br>";
+     $.each(data.tcontent, function(index, item) {
+          toc += item.url + '<div class="grid" style="background-color:#00ffff;">' + "<p class='gridtext'>" + item.Chapter + ":" + item.Name  + "</p>" +     "</div>" + "</a>" 
+          //if(index%2==0){
+          //  toc+= "<br>"
+          //}
+    });
+     $(toc).appendTo(".menu");
+     //alert(toc)
+ });
+});
+    </script> 
+
+ 
+
+    </head>
+
+    <body style="background-color:#ACD1E9;">
+
+       <div class="title">
+             <a class="ios-6-arrow left dark" href="index.html" data-title="back"></a>
+              <h3>Main Menu</h3>
+              <div class="infob"><a href="info.html" style="text-decoration:none"><h3>i</h3></a></div>
+        </div> 
+        <div class="menu">
+    
+        </div>
+     
+    </body>
+</html>
+
+
+<!--This is the testing code for the menu --> 
+  <div class="ui-block-a">
+                    <a href="#"><div class="grid"><p class="gridtext">General Principles of Antibiotic Perscribing</p></div></a>
+                  </div>
+                
+                   <div class="ui-block-b">
+                    <a href="#"><div class="grid"><p class="gridtext">Hello</p></div></a>
+                  </div>
+                    
+                   <div class="ui-block-c">
+                    <a href="#"><div class="grid"><p class="gridtext">Hello</p></div></a>
+                  </div>
+
+                  <div class="ui-block-d">
+                    <a href="#"><div class="grid"><p class="gridtext">Hello</p></div></a>
+                  </div>
+
+
+<!--This is the testing code for the menu --> 
+ var grid= new Array();
+    grid[0]= "<div class='ui-block-a'>";
+    grid[1]= "<div class='ui-block-b'>";
+    grid[2]= "<div class='ui-block-c'>";
+    grid[3]= "<div class='ui-block-d'>";
+    var j=0;
+
+
+    $(document).bind('pageinit',function(){
+
+      var imp = "Json/contents.json"
+
+      $.getJSON(imp, function(data) {
+        var toc="";
+        var pos=grid[j];
+        $.each(data.tcontent, function(index, item) {
+          toc += pos + item.url + '<div class="grid">' + "<p class='gridtext'>" + item.Chapter + ":" + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
+        });
+
+     //incriment j
+     j++;
+
+     //if j is out of bounds return j to 0
+     if(j==4){
+      j=0;
+    }
+    $(toc).appendTo(".ui-grid-d");
+     //alert(toc)
+   });
+    });
+
+
+
+
+<!--This is the newest modded code for the menu --> 
+   var grid= new Array();
+
+grid[0]= "<div class='ui-block-a'>";
+grid[1]= "<div class='ui-block-b'>";
+grid[2]= "<div class='ui-block-c'>";
+grid[3]= "<div class='ui-block-d'>";
+var j=0;
+
+$(document).on("pageinit", "#Page1", function(){
+
+  var imp = "Json/contents.json"
+
+    $.getJSON(imp, function(data) {
+
+    var toc= '';
+    $.each(json.tcontent, function(index, item) {
+        if (j > 3) { j = 0; }
+      toc += grid[j] + item.url + '<div class="grid">' + "<a><p class='gridtext'>" + item.Chapter + ":" + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
+        j++;
+    });
+    
+    $(toc).appendTo(".ui-grid-c");
+  });
+});
+
+
+<!-- This is the full empricial.html before I started modding it for jquery-mobile -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <title>Landing Page</title>
+     <script type="text/javascript" src="js/jquery-1.11.0.min.js"> </script> 
+
+   <script type="text/javascript">
+
+ 
+ $(function (){
+    var imp = "Json/therapy.json"
+ $.getJSON(imp, function(data) {
+    var toc = "<br>";
+     $.each(data.tcontent, function(index, item) {
+          toc += item.url + item.image + "<p class='picgridtext'>" + item.Name + "</div>" + "</a>" 
+    });
+     $(toc).appendTo(".menu");
+     //alert(toc)
+ });
+});
+    </script> 
+
+ 
+
+    </head>
+
+    <body style="background-color:#ACD1E9;">
+         <div class="title">
+             <a class="ios-6-arrow left dark" href="welcome.html" data-title="back"></a>
+
+              <h3>Empirical Guidelines</h3>
+              <div class="infob"><a href="info.html" style="text-decoration:none"><h3>i</h3></a></div>
+        </div> 
+        <div class="menu">
+    
+        </div>
+     
+
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
+
+
+
+<!-- This is hardcord for welcome.html -->
+
+ <div class="ui-block-a"><a href="general_principles.html"><div class="grid"><p class="gridtext"> 1:General Principles of Antibiotic Perscribing </p></div></a></div>
+             <div class="ui-block-b"><a href="iv2oral.html"><div class="grid"><p class="gridtext"> 2:General for the Intravenous to Oral switch of Antibiotic Therapy</p></div></a></div>
+              <div class="ui-block-c"><a href="empirical.html"><div class="grid"><p class="gridtext"> 3:Empirical Therapy Guidelines </p></div></a></div>
+              <div class="ui-block-a"><a href="mrsa_note.html"><div class="grid"><p class="gridtext"> 4:Note on meticillin resistant Staphylococcus aureus (MRSA) </p></div></a></div>

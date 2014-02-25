@@ -1,0 +1,68 @@
+{
+ "tcontent": [{
+"Chapter": "1",
+"Name": "General Principles of Antibiotic Perscribing",
+"url":"<a href='general_principles.html'>",
+"Background":"yellow"
+}, {
+"Chapter": "2",
+"Name": "Note on meticillin resistant SA",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "3",
+"Name": "Empirical Therapy Guidelines:",
+"url": "<a href='empirical.html'>",
+"Background":"background-color:red"
+}, {
+"Chapter": "4",
+"Name": "Treatment of Malaria",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "5",
+"Name": "Antibiotic Prophylaxis:",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "6",
+"Name": "Aminoglycoside and Glycopeptide dosing and monitoring:",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "7",
+"Name": "Splenectomy: vaccination and antibiotic prophylaxis",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "8",
+"Name": "Restricted Antimicrobials",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "9",
+"Name": "Topical Antibiotics",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "10",
+"Name": "Antimicrobials and Renal Failure",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "11",
+"Name": "Antimicrobials and Hepatic Disease",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "12",
+"Name": "Administration of IV Antimicrobials",
+"url":"<a>",
+"Background":"background-color:red"
+}, {
+"Chapter": "13",
+"Name": "Penicillin allergy & other beta-lactam containing antibiotics",
+"url":"<a>",
+"Background":"background-color:red"
+}]
+};
