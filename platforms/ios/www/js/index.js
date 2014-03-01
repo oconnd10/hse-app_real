@@ -48,4 +48,5 @@ var landing = {
     }
 };
 
+//var stop=false;
 

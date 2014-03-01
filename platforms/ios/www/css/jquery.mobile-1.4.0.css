@@ -8,7 +8,9 @@
 * http://jquery.org/license
 *
 */
-
+body .ui-footer .ui-title {
+ white-space: normal;
+}
 
 /* SVG icons */
 .ui-icon-action:after {
