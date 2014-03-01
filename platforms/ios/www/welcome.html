@@ -35,35 +35,45 @@
       </div>
 
       <script type="text/javascript">
-      
-  var grid= new Array();
-  grid[0]= "<div class='ui-block-a'>";
-  grid[1]= "<div class='ui-block-b'>";
-  grid[2]= "<div class='ui-block-c'>";
-  var j=0;
-  var stop=false;
 
-  //   if ($(".ui-grid-b > div").length > 0){
-    $(document).on("pageinit", "#Page1", function(){
-      j=0;
+      var grid= new Array();
+      grid[0]= "a";
+      grid[1]= "b";
+      grid[2]= "c";
+      var j=0;
 
-      var imp= "Json/contents.json";
-      $.getJSON(imp, function(data) {
-       var toc= '';
-       $.each(data.tcontent, function(index, item) {
-        if (j > 2) { j = 0; }
-        toc += grid[j] + item.url + '<div class="grid">' + "<p class='gridtext'>"  + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
-        j++;
+      var color= new Array();
+      color[0]= '#00c6c4;';
+      color[1]= '#6fc41b;';
+      color[2]= '#ffe800;';
+      color[3]= '#976833;';
+      color[4]= '#1fbbff;';
+      var k=0;
+
+
+      $(document).on("pageinit", "#Page1", function(){
+
+
+        var imp= "Json/contents.json";
+        $.getJSON(imp, function(data) {
+         j=0;
+         k=0;
+         var toc= '';
+         $.each(data.tcontent, function(index, item) {
+          if (j > 2) { j = 0; }
+          if (k > 4) { k = 0; }
+          toc += "<div class='ui-block- ' " + grid[j] + " '>" + item.url + '<div class="grid" style="background-color: ' + color[k] + ' ">' + "<p class='gridtext'>"  + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
+          j++;
+          k++;
+        });
+
+
+         $(".ui-grid-b").empty().append(toc);
+       });
       });
 
-        //$(toc).appendTo(".ui-grid-b");
-        $(".ui-grid-b").empty().append(toc);
-      });
-    });
-    //} 
 
-
-    </script> 
+      </script> 
 
 
 
