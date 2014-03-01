@@ -45,9 +45,11 @@
       var color= new Array();
       color[0]= '#00c6c4;';
       color[1]= '#6fc41b;';
-      color[2]= '#ffe800;';
-      color[3]= '#976833;';
+      color[2]= '#ffbd0c;';
+      color[3]= '#ff84f1;';
       color[4]= '#1fbbff;';
+      color[5]= '#ff1700;';
+      color[6]= '#976833;';
       var k=0;
 
 
@@ -61,7 +63,7 @@
          var toc= '';
          $.each(data.tcontent, function(index, item) {
           if (j > 2) { j = 0; }
-          if (k > 4) { k = 0; }
+          if (k > 6) { k = 0; }
           toc += "<div class='ui-block- ' " + grid[j] + " '>" + item.url + '<div class="grid" style="background-color: ' + color[k] + ' ">' + "<p class='gridtext'>"  + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
           j++;
           k++;
