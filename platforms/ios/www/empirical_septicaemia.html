@@ -1,78 +1,68 @@
  <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css"/>
-        <title>Landing Page</title>
-     <script type="text/javascript" src="js/jquery-1.11.0.min.js"> </script> 
-
-   <script type="text/javascript">
-
- 
- $(function (){
-    var imp = "Json/therapy.json"
- $.getJSON(imp, function(data) {
-     $.each(data.tcontent, function(i, item) {
-    if(item.Name=='Septicaemia'){
-        var search = item.Variations;
-        $.each(item.Variations, function(j, subitem) {
-            var info = "<p class='guidelinetext'>" + subitem.condition + subitem.organisms + subitem.antimicrobial + subitem.alternative + subitem.comments + "</p>" + "<hr>";
-            $(info).appendTo(".menu");
-        });
-
-    }
-});
-});
-});
-    </script> 
-
+ <html>
+ <head>
+    <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>Landing Page</title>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"> </script> 
 </head>
 
-     <body>
-          <div data-role="page" data-theme="a" id="Page1">
+<body>
+  <div data-role="page" data-theme="a" id="Page1">
 
-            <div data-role="header" data-theme="c">
-              <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
-                <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
-                <h2>Septicaemia</h2>
-            </div>
+    <div data-role="header" data-theme="c">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Septicaemia</h2>
+  </div>
 
-            <div data-role="content" data-theme="c" id="Page1_Content">
+  <div data-role="content" data-theme="c" id="Page1_Content">
 
-            <p class="guidelinetext"> Clinical Condition: </u>Community-acquired, , (<b>excluding</b> abdominal or pelvic source) Likely Organisms: </u>Staph. aureus, Strep. pneumoniae, Neisseria. meningitidis, Step. pyogenes (Group A strep), Occasionally Gram-negative bacilli. <br><u>Antimicrobial &amp; Dosage: </u>Flucloxacillin 2g iv qds <br> <b>Plus</b> <br> Cefotaxime 2g iv qds <br> +/- <br> Gentamicin 5mg/kg/day iv od <br><u>Alternative Antimicrobial:</u> <u>Penicillin allergy</u> (non anaphylaxis): <br> Vancomycin 15mg/kg iv bd <br> <b>Plus</b> <br> Cefotaxime 2g iv qds <br> +/-  <br> Gentamicin 5mg/kg/day iv od <br><u>Comments: </u>Perform full septic screen. Always take blood cultures first (minimum 2 sets). <br> Refer to Connolly Hospital Surviving Sepsis Guidelines Seek advice from Consultant Microbiologist if in doubt or in setting of penicillin anaphylaxis </p> <hr> <p class="guidelinetext"><br><u>Clinical Condition:</u> Community-acquired if intra- abdominal source suspected <br><u>Likely Organisms:</u> Predominantly Gram negatives and anaerobes Enterococci may also feature<br><u>Antimircobial &amp; Dosage:</u> Co-amoxiclav 1.2g iv tds <br> +/- <br> Gentamicin 5mg/kg/day iv od (based on patient history, previous antibiotic use, clinical assessment, etc.)  <br> <b> Or </b> <br> Amoxicillin 1g iv qds <br>  <b>Plus</b> <br> Gentamicin 5mg/kg/day iv od <br> <b>Plus</b> <br> Metronidazole 500mg iv tds <br><u>Alternative Antimicrobial:</u> Penicillin allergy (non anaphylaxis) Cefuroxime 1.5g iv tds <br> <b>Plus</b> <br> Metronidazole 500mg iv tds <br> +/- <br> Gentamicin 5mg/kg/day iv od <br> <br> Penicillin allergy (anaphylaxis): Vancomycin 15mg/kg iv bd <b> Plus </b> Gentamicin 5mg/kg/day iv od <b> Plus</b> Metronidazole 500mg iv tds <br><u>Comments:</u>Perform full septic screen <br> Seek advice from Consultant Microbiologist if necessary <br> Send intra-operative samples (preferably pus not swabs) for culture if surgical intervention performed </p> <hr>
+    <p class="infotext"><b>Clinical Condition:</b></p>
 
-          </div>
+    <div id="texts" data-role="collapsible-set">
 
-            <div data-role="footer" data-theme="c">
-                <h2>(c) Darragh O'Connor </h2>
-            </div>
+    </div>
 
 
-        </div>
-        
-     
-    </body>            
- 
+    <script type="text/javascript">
+
+    $(document).on("pageinit", "#Page1", function(){ 
+      var info="";  
+      var imp= "Json/empirical.json";
+      $.getJSON(imp, function(data) {
+
+       $.each(data.tcontent, function(i, item) {
+        if(item.Name=='Septicaemia'){
+         var search=item.Variations;
+         $.each(search, function(j, subitem) {
+            info += '<div data-role="collapsible" data-mini="true" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right" data-theme="d" data-content-theme="d"> <h3>' + subitem.condition +'</h3> <p class="guidelinetext">'  + subitem.organisms  + subitem.antimicrobial + subitem.alternative + subitem.comments + '</p> </div>';                        
+        });
+     }
+     $("#texts").empty().append(info).collapsibleset();
+ });
+   });
+  });
+
+    </script> 
+
+</div>
+
+
+
+<div data-role="footer" data-theme="c">
+    <h2>(c) Darragh O'Connor </h2>
+</div>
+
+
+</div>
+
+
+</body>            
+
 </html>

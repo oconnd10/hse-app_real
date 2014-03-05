@@ -19,53 +19,61 @@
 -->
 <html>
     <head>
-        <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css"/>
-        <title>Landing Page</title>
-     <script type="text/javascript" src="js/jquery-1.11.0.min.js"> </script> 
-
-   <script type="text/javascript">
-
- 
- $(function (){
-    var imp = "Json/therapy.json"
- $.getJSON(imp, function(data) {
-     $.each(data.tcontent, function(i, item) {
-    if(item.Name=='Skin and Soft Tissue Infections'){
-        var search = item.Variations;
-        $.each(item.Variations, function(j, subitem) {
-            var info = "<p class='guidelinetext'>" + subitem.condition + subitem.organisms + subitem.antimicrobial + subitem.alternative + subitem.comments + "</p>" + "<hr>";
-            $(info).appendTo(".menu");
-        });
-
-    }
-});
-});
-});
-    </script> 
-
- 
+  <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css" />  
+  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
 
     </head>
 
-    <body style="background-color:#ACD1E9;">
-         <div class="title">
-             <a class="ios-6-arrow left dark" href="empirical.html" data-title="back"></a>
-              <h3>Skin and Soft Tissue Infections</h3>
-        </div> 
-        <div class="menu">
-    
-        </div>
-     
 
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+<body>
+
+  <div data-role="page" data-theme="a" id="Page1">
+    <div data-role="header" data-theme="c">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Skin &amp; Soft Tissue</h2>
+  </div>
+  <div data-role="content" data-theme="c" id="Page1_Content">
+    <p class="infotext"><b>Clinical Condition:</b></p>
+    <div id="texts" data-role="collapsible-set">
+    </div>
+    <script type="text/javascript">
+    $(document).on("pageinit", "#Page1", function(){ 
+      var info="";  
+      var imp= "Json/empirical.json";
+      $.getJSON(imp, function(data) {
+       $.each(data.tcontent, function(i, item) {
+        if(item.Name=='Skin and Soft Tissue Infections'){
+         var search=item.Variations;
+         $.each(search, function(j, subitem) {
+            info += '<div data-role="collapsible" data-mini="true" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right" data-theme="d" data-content-theme="d"> <h3>' + subitem.condition +'</h3> <p class="guidelinetext">'  + subitem.organisms  + subitem.antimicrobial + subitem.alternative + subitem.comments + '</p> </div>';                        
+        });
+     }
+     $("#texts").empty().append(info).collapsibleset();
+ }) }); });
+
+    </script> 
+</div>
+
+
+
+<div data-role="footer" data-theme="c">
+    <h2>(c) Darragh O'Connor </h2>
+</div>
+
+
+</div>
+
+
+</body>            
+
 </html>

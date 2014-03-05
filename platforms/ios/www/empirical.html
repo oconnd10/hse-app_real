@@ -31,336 +31,6 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
-
-   <script type="text/javascript">
-var grid= new Array();
-  grid[0]= "<div class='ui-block-a'>";
-  grid[1]= "<div class='ui-block-b'>";
-  grid[2]= "<div class='ui-block-c'>";
-  var j=0;
-
- var json ={
- "tcontent": [{
- 
-  "Name": "Septicaemia",
-  "url":"<a href='empirical_septicaemia.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/septicaemia.jpg);'>",
-  "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>Community-acquired, , (<b>excluding</b> abdominal or pelvic source)",
-      "organisms":"<br><u>Likely Organisms: </u>Staph. aureus, Strep. pneumoniae, Neisseria. meningitidis, Step. pyogenes (Group A strep), Occasionally Gram-negative bacilli.",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>Flucloxacillin 2g iv qds <br> <b>Plus</b> <br> Cefotaxime 2g iv qds <br> +/- <br> Gentamicin 5mg/kg/day iv od",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> <u>Penicillin allergy</u> (non anaphylaxis): <br> Vancomycin 15mg/kg iv bd <br> <b>Plus</b> <br> Cefotaxime 2g iv qds <br> +/-  <br> Gentamicin 5mg/kg/day iv od",
-      "comments": "<br><u>Comments: </u>Perform full septic screen. Always take blood cultures first (minimum 2 sets). <br> Refer to Connolly Hospital Surviving Sepsis Guidelines Seek advice from Consultant Microbiologist if in doubt or in setting of penicillin anaphylaxis"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> Community-acquired if intra- abdominal source suspected",
-      "organisms":"<br><u>Likely Organisms:</u> Predominantly Gram negatives and anaerobes Enterococci may also feature",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u> Co-amoxiclav 1.2g iv tds <br> +/- <br> Gentamicin 5mg/kg/day iv od (based on patient history, previous antibiotic use, clinical assessment, etc.)  <br> <b> Or </b> <br> Amoxicillin 1g iv qds <br>  <b>Plus</b> <br> Gentamicin 5mg/kg/day iv od <br> <b>Plus</b> <br> Metronidazole 500mg iv tds",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> Penicillin allergy (non anaphylaxis) Cefuroxime 1.5g iv tds <br> <b>Plus</b> <br> Metronidazole 500mg iv tds <br> +/- <br> Gentamicin 5mg/kg/day iv od <br> <br> Penicillin allergy (anaphylaxis): Vancomycin 15mg/kg iv bd <b> Plus </b> Gentamicin 5mg/kg/day iv od <b> Plus</b> Metronidazole 500mg iv tds",
-      "comments":"<br><u>Comments:</u>Perform full septic screen <br> Seek advice from Consultant Microbiologist if necessary <br> Send intra-operative samples (preferably pus not swabs) for culture if surgical intervention performed"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> Healthcare-associated",
-      "organisms":"<br><u>Likely Organisms:</u> Varies: Antimicrobial resistant gram- negative bacilli and meticillin resistant Staphylococcus aureus (MRSA) more likely",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> Piperacillin-tazobactam 4.5g iv tds <br> +/- <br> Gentamicin 5mg/kg/day iv od (base treatment choice on patient history, previous antibiotic use, microbiology results, clinical assessment, etc.)",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>Seek advice from Consultant Microbiologist",
-      "comments":"<br><u>Comments:</u> Always take blood cultures first. <b> Empiric treatment guided by previous antimicrobial treatment and culture results to date </b> (review MRSA status and consider addition of Vancomycin if known to be colonised with MRSA)"
-     }]
- 
-   }, {
- 
-  "Name": "Infective Endocarditis (IE) (pending blood culture results)",
-  "url":"<a href='empirical_ie.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/endocarditis.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
- 
-  }, {
- 
-  "Name": "Central Nervous System Infections",
-  "url":"<a href='empirical_cns.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/cns.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
-  }, {
- 
-  "Name": "Skin and Soft Tissue Infections",
-  "url": "<a href='empirical_skin.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/skin.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
-  }, {
- 
-  "Name": "Diabetic patients with foot infections",
-  "url": "<a href='empirical_diabetic.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/foot.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition:</u> Infected superficial ulcer",
-      "organisms":"<br><u>Likely Organisms:</u> Predominantly gram- positive organisms (e.g. <i>Staphylococus aureus</i>, Beta haemolytic streptococci)",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> Flucloxacillin 500mg po qds <br> <b>Duration:</b> 7 days",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> <i>Penicillin allergy/MRSA positive:</i> Discuss with microbiologist",
-      "comments": "<br><u>Comments:</u>Tissue or pus specimen from ulcer to be sent for culture and sensitivity (here and below rationalise treatment based on c+s). Always review previous culture results as this will guide therapy. Management includes wound care – clean, debride (antibiotics do not penetrate necrotic tissue) and offload pressure. Discuss care with endocrinology team"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> Infected deep ulcer/ infected ulcer with mild (<2cm) cellulitis",
-      "organisms":"<br><u>Likely Organisms:</u> Predominantly gram- positive organisms (e.g. Staphylococus aureus, Beta haemolytic streptococci)*",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u> Flucloxacillin 500mg po qds* <br> <br> <b>Duration:</b> 10-14 days (duration depends on extent of tissue injury involvement, adequacy of debridement and wound vasculature)",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> <u>Penicillin allergy/MRSA positive:</u> Discuss with microbiologist <br> *If chronic ulcers, recent antibiotic use and foot ischaemia or gangrene consider polymicrobial aetiology and need for co-amoxiclav instead of flucloxacillin",
-      "comments":"<br><u>Comments:</u> <u>As above</u> <br><b>Patient may require IV antibiotics.</b> <br>Contact microbiologist to discuss risk assessment regarding ciprofloxacin use in case of suspected pseudomonal infection."
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> Infected foot ulcer with severe (>2cm) cellulitis",
-      "organisms":"<br><u>Likely Organisms:</u> Polymicrobial",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> Flucloxacillin 2g iv qds <b>Plus</b> Ciprofloxacin 400mg iv bd <b>Plus</b> Metronidazole 500mg iv tds. <b>Duration:</b> 14 days (duration depends on extent of tissue injury involvement, adequacy of debridement and wound vasculature)",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> <u>Penicillin allergy/MRSA positive:</u> Vancomycin 15mg/kg iv bd <b>Plus</b> Ciprofloxacin 400mg iv bd <b>Plus</b> Metronidazole 500mg iv tds.",
-      "comments":"<br><u>Comments:</u> Ulcer debridement and send tissue sample or pus to microbiology. <br> <br> If the patient has a past history of C. difficile contact the microbiologist regarding an alternative to ciprofloxacin for antibiotic therapy."
-     }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> Infected foot ulcer with suspected osteomyelitis",
-      "organisms":"<br><u>Likely Organisms:</u> Polymicrobial",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u> Flucloxacillin 2g iv qds <b>Plus</b> Ciprofloxacin 400mg iv bd <b>Plus</b> Metronidazole 500mg iv tds.<br> <b>Duration:</b> 8 weeks – 3 months (duration depends on acute or chronic presentation).",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> <u>Penicillin allergy/MRSA positive:</u> Vancomycin 15mg/kg iv bd <b>Plus</b> Ciprofloxacin 400mg iv bd <b>Plus</b> Metronidazole 500mg iv tds",
-      "comments":"<br><u>Comments:</u> Orthopaedic consultation regarding the need for bone biopsy and bone culture and in the setting of chronic osteomyelitis the need for bone debridement<br> Discuss treatment plan with microbiologist"
- 
-      }]
- 
-  }, {
- 
-  "Name": "Bone and Joint Infections",
-  "url": "<a href='empirical_bone.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/bone.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
-  }, {
- 
-  "Name": "Intravascular Line Infections",
-  "url": "<a href='empirical_intravasular.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/intravascular.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
-  }, {
- 
-  "Name": "Urinary Tract Infections",
-  "url": "<a href='empirical_uti.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/urinary.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
-  }, {
- 
-  "Name": "Respiratory Tract Infections",
-  "url": "<a href='empirical_rti.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/respiratory.jpg);'>",
-   "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
-  }, {
- 
-  "Name": "Gastrointestinal Infections",
-   "url": "<a href='empirical_gastro.html'>",
-   "image":"<div class='grid' style='background-image:url(img/anatomy/gastrointestinal.jpg);'>",
-    "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
- 
-      }, {
- 
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
- 
-    }]
- 
-   };  
-
-      
-  $(document).on("pageinit", "#Page1", function(){
-    
-    var toc= '';
-    $.each(json.tcontent, function(index, item) {
-      if (j > 2) { j = 0; }
-      toc += grid[j] + item.url + item.image + "<p class='gridtext'>" + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
-      j++;
-    });
-    
-    $(toc).appendTo(".ui-grid-b").trigger('pagecreate');
-
-  });
-
- 
-</script>
- 
-
   </head>
 
      <body>
@@ -369,16 +39,54 @@ var grid= new Array();
             <div data-role="header" data-theme="c">
               <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
                 <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
-                <h2>Empirical Guidelines</h2>
+                <h2>Empirical Guidlines</h2>
             </div>
 
             <div data-role="content" data-theme="c" id="Page1_Content">
-
-            <div class="ui-grid-b">
-              <div class="ui-block-a"> <a href="empirical_septicaemia.html"><div class="grid")> <p class="gridtext"> Septicaemia </p> </div> </a> </div>
-              <div class="ui-block-b"> <a href="empirical_ie.html"> <div class="grid"> <p class="gridtext"> Infective Endocarditis (IE) (pending blood culture results) </p></div></a></div>
-
+            <div id="empTOC" class="ui-grid-b">
+              
             </div>
+
+            <script type="text/javascript">
+
+            var grid= new Array();
+            grid[0]= "a";
+            grid[1]= "b";
+            grid[2]= "c";
+            var j=0;
+
+            var color= new Array();
+            color[0]= '#00c6c4;';
+            color[1]= '#6fc41b;';
+            color[2]= '#ffbd0c;';
+            color[3]= '#ff84f1;';
+            color[4]= '#1fbbff;';
+            color[5]= '#ff1700;';
+            color[6]= '#976833;';
+            var k=0;
+
+
+            $(document).on("pageinit", "#Page1", function(){
+
+
+              var imp= "Json/empirical.json";
+              $.getJSON(imp, function(data) {
+               j=0;
+               k=0;
+               var toc= '';
+               $.each(data.tcontent, function(index, item) {
+                if (j > 2) { j = 0; }
+                if (k > 6) { k = 0; }
+                toc += "<div class='ui-block- ' " + grid[j] + " '>" + item.url + '<div class="grid" style="background-color: ' + color[k] + ' ">' + "<p class='gridtext'>"  + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
+                j++;
+                k++;
+              });
+               $("#empTOC").empty().append(toc);
+             });
+            });
+
+
+            </script> 
 
           </div>
 

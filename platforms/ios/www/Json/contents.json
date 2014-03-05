@@ -19,7 +19,7 @@
         "Background":"background-color:red;"
       }, {
         "Name": "Treatment of Malaria",
-        "url":"<a>",
+        "url":"<a href='malaria.html'>",
         "Background":"background-color:red;"
       }, {
         "Name": "Antibiotic Prophylaxis",

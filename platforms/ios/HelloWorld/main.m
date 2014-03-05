@@ -18,10 +18,10 @@
  */
 //
 //  main.m
-//  HelloWorld
+//  Connolly Antimicrobial Application
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
+//  Created by Darragh O'Connor on 01/03/2014.
+//  Copyright Darragh O'Connor 2014. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

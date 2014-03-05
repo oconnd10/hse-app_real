@@ -30,7 +30,7 @@
 
     <div data-role="content" data-theme="c" id="Page1_Content">
 
-      <div class="ui-grid-b">
+      <div id="theTOC" class="ui-grid-b">
 
       </div>
 
@@ -51,13 +51,14 @@
       color[5]= '#ff1700;';
       color[6]= '#976833;';
       var k=0;
-
+      var once=0;
 
       $(document).on("pageinit", "#Page1", function(){
 
 
         var imp= "Json/contents.json";
         $.getJSON(imp, function(data) {
+
          j=0;
          k=0;
          var toc= '';
@@ -69,8 +70,7 @@
           k++;
         });
 
-
-         $(".ui-grid-b").empty().append(toc);
+         $("#theTOC").empty().append(toc);
        });
       });
 
