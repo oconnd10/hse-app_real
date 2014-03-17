@@ -1,0 +1,60 @@
+{
+    "Slpeen": [
+        {
+            "Name": "<b>When to vaccinate?</b>",
+            "Details": "• <b>Elective</b>: Vaccines should preferably be given two weeks prior to the procedure.<br>• If this is not practical, the patient should be immunised as soon as possible after recovery from the operation and before discharge from hospital.<br>• Patients who have had immunosuppressive chemotherapy or radiotherapy should not be vaccinated for 3 months after treatment."
+        },
+        {
+            "Name": "<b>Inform the patient and relatives</b>",
+            "Details": "Patients and relatives must be informed that the spleen has been removed, therefore:<br>• Antibiotic prophylaxis is necessary for life<br>• The patient must attend a doctor immediately if they feel unwell<br>• They should be given a copy of a patient information leaflet<br>• Patients should be advised to invest in an alert bracelet or card<br>• Patients should be alerted to the potential risks of overseas travel eg Malaria and also the risks from animal bites."
+        },
+        {
+            "Name": "<b>Documentation</b>",
+            "Details": "Document that patient has had a splenectomy and that vaccination and advice regarding antibiotics has been given<br>• On front of patients chart<br>• In medical case notes."
+        },
+        {
+            "Name": "<b>Inform the patient's GP</b>",
+            "Details": "• The patient’s general practitioner should be notified of the splenectomy and vaccinations given (by telephone and in discharge letter)."
+        }
+    ],
+    "Prophylaxis": [
+        {
+            "Options": "1st line: PHENOXYMETHYLPENICILLIN",
+            "Dose": "333-666mg twice daily 1st line treatment"
+        },
+        {
+            "Options": "2nd line: AMOXICILLIN",
+            "Dose": "500mg daily"
+        },
+        {
+            "Options": "3rd line: CLARITHROMYCIN (Penicillin allergy)",
+            "Dose": "500mg daily"
+        }
+    ],
+    "Vaccinations": [
+        {
+            "Vaccine": "Pneumococcal Vaccine (Pneumovax II)",
+            "Dose": "<u>Dose:</u> 0.5ml IM or SC Preferably 2 weeks before splenectomy. Otherwise administer before discharge Single dose injection",
+            "immunisation":"Yes<br> Every 5 years",
+            "live":"No"
+        },
+        {
+            "Vaccine": "Meningococcal quadrivalent conjugate ACW135Y vaccine (Menveo)",
+            "Dose": "<u>Dose:</u> 0.5ml IM Preferably 2 weeks before splenectomy. Otherwise administer before discharge.",
+            "immunisation":"Yes <br>At least 1 month after 1st vaccination",
+            "live":"No"
+        },
+        {
+            "Vaccine": "Haemophilus influenza Type B Vaccine (Hiberix, Act-Hib)",
+            "Dose": "Dose: 0.5ml IM Preferably 2 weeks before splenectomy. Otherwise administer before discharge.",
+            "immunisation":"Yes (if previously unimmunised)<br> 2 months after 1st vaccination",
+            "live":"No"
+        },
+        {
+            "Vaccine": "Influenza Vaccine (Agrippal, Enzira, Imuvac, Fluarix)",
+            "Dose": "Dose: 0.5ml IM or deep SC Annual Vaccination",
+            "immunisation":"Every Year",
+            "live":"No"
+        }
+    ]
+}

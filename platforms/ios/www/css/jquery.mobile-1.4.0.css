@@ -9,7 +9,7 @@
 *
 */
 body .ui-footer .ui-title {
- white-space: normal;
+ white-space: nowrap;
 }
 
 /* SVG icons */
@@ -1515,7 +1515,7 @@ div.ui-mobile-viewport {
 	text-align: center;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	white-space: nowrap;
+	white-space: normal;
 	cursor: pointer;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -3529,7 +3529,7 @@ fieldset.ui-controlgroup {
 	display: block;
 	text-overflow: ellipsis;
 	overflow: hidden !important;
-	white-space: nowrap;
+	white-space: normal;
 }
 .ui-selectmenu.ui-popup {
 	min-width: 11em;
@@ -3621,7 +3621,7 @@ fieldset.ui-controlgroup {
 	text-align: left;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	white-space: nowrap;
+	white-space: normal;
 }
 .ui-listview > li > .ui-btn:focus {
 	z-index: 1;

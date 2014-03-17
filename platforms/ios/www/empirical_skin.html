@@ -1,24 +1,7 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
+<head>
   <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
@@ -31,7 +14,7 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
 
-    </head>
+</head>
 
 
 <body>
@@ -44,24 +27,35 @@
   </div>
   <div data-role="content" data-theme="c" id="Page1_Content">
     <p class="infotext"><b>Clinical Condition:</b></p>
-    <div id="texts" data-role="collapsible-set">
+    <div id="texts">
+
     </div>
     <script type="text/javascript">
     $(document).on("pageinit", "#Page1", function(){ 
-      var info="";  
+      var info="";
+      var dpages="";
+      var pageno=1;  
       var imp= "Json/empirical.json";
       $.getJSON(imp, function(data) {
-       $.each(data.tcontent, function(i, item) {
-        if(item.Name=='Skin and Soft Tissue Infections'){
-         var search=item.Variations;
-         $.each(search, function(j, subitem) {
-            info += '<div data-role="collapsible" data-mini="true" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right" data-theme="d" data-content-theme="d"> <h3>' + subitem.condition +'</h3> <p class="guidelinetext">'  + subitem.organisms  + subitem.antimicrobial + subitem.alternative + subitem.comments + '</p> </div>';                        
-        });
-     }
-     $("#texts").empty().append(info).collapsibleset();
- }) }); });
+         $.each(data.tcontent, function(i, item) {
+            if(item.Name=='Skin and Soft Tissue Infections'){
+               var search=item.Variations;
+               $.each(search, function(j, subitem) {
 
-    </script> 
+                info += '<a href="#Paged'+ pageno + ' " data-role="button" data-mini="true" rel="external">'+ subitem.condition +'</a><br>';
+
+                dpages += '<div data-role="page"  data-theme="a" id="Paged' + pageno + '" data-dom-cache="true"> <div data-role="header" data-theme="c"><a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back</a> <h2>'+ subitem.condition +'</h2> </div> <div data-role="content" data-theme="c" id="Paged '+ pageno +'_Content">  <p class="infotexttitle">Likely Organisms: </p> ' + subitem.organisms + ' <p class="infotexttitle"> Antimicrobial & Dosage </p> ' + subitem.antimicrobial + '  <p class="infotexttitle"> Alternative Antimicrobial: </p> ' + subitem.alternative + ' <div data-role="collapsible" data-mini="true" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right" data-theme="d" data-content-theme="d"> <h3> Comments: </h3> <p class="guidelinetext"> ' + subitem.comments + ' </p></div> </div> <div data-role="footer" data-theme="c"> <h2>(c) Darragh O Connor </h2></div> </div></div>';
+
+
+
+                pageno++;                        
+            });
+}
+$("#texts").empty().append(info).collapsibleset().trigger('create');
+$.mobile.pageContainer.append(dpages);
+}); }); });
+
+</script> 
 </div>
 
 
@@ -70,6 +64,10 @@
     <h2>(c) Darragh O'Connor </h2>
 </div>
 
+
+</div>
+
+<div id="pages">
 
 </div>
 

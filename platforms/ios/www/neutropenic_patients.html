@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link rel="stylesheet" href="css/themes/hse.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css" />  
+  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
+
+
+
+
+</head>
+
+<body>
+  <div data-role="page" data-theme="hse_top" id="Page1">
+
+    <div data-role="header" data-theme="a">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Management of Neutropenis Patients with Fever</h2>
+    </div>
+
+    <div data-role="content" data-theme="a" id="Page1_Content">
+      <p class="infotext">Fever in neutropenic patients, especially with severe neutropenia (&lt;500 neutrophils/mm3), is a common occurrence. Patients must be thoroughly examined with particular attention to the chest, mucosa, IV lines, abdomen, peri-anal area and wounds. It is also very important to review any recent microbiology results as these may guide treatment. </p>
+
+      <p class="infotexttitle">Empiric Antibiotic Treatment:</p>
+      <p class="infotext">Below is a step wise introduction of antibiotics in the febrile neutropenic patient. Antibiotic treatment may be subsequently altered on the basis of positive microbiology results or the clinical course.</p>
+
+      <p class="infotext"><span style="color:red;">Piperacillin/tazobactama 4.5g iv qds</span></p>
+      <p class="infotext">Add gentamicinb 5mg/kg/day if any of the following apply<br>- patient is haemodynamically unstable<br>- duration of neutropenia greater than 10 days<br>- patient deteriorates after initial assessment</p>
+
+      Temperature Settles:
+      <a href="#two" data-role="button" data-mini="true" rel='external'>Yes</a>
+   
+
+      <a href='#Page3' data-role='button' data-mini='true' rel='external'>No</a>
+    </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+
+</div>
+
+<!--Page 2 -->
+  <div data-role="page" id="two">
+
+    <div data-role="header">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Temp settled</h2>
+    </div>
+
+    <div data-role="content">
+      <p class="infotexttitle">Continued Treatment:</p>
+      <p class="infotext">Review planned duration of antimicrobial treatment (see option d in link below)</p>
+
+       <a href="#Page8" data-role="button" data-mini="true" rel='external'>Reccommended Treatment</a>
+    </div>
+
+  <div data-role="footer">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+
+</div>
+
+ <!--Page 3 --> 
+  <div data-role="page" id="Page3">
+
+    <div data-role="header" data-theme="a">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Temp hasn't settled</h2>
+    </div>
+
+    <div data-role="content" >
+      <p class="infotexttitle">Continued Treatment:</p>
+      <p class="infotext">￼Ongoing pyrexia after 48 hours, repeat blood cultures, add <b>gentamicin</b> b 5mg/kg/day (if not already on this) and <b>vancomycin</b> b 15mg/kg iv bd (if central line in situ and evidence of line infection or patient has severe mucositis addition of <b>vancomycin</b> may be indicated before 48 hours have elapsed)</p>
+
+      Temperature Settles:
+      <a href="#Page4" data-role="button" data-mini="true" rel='external'>Yes</a>
+   
+
+      <a href='#Page5' data-role='button' data-mini='true' rel='external'>No</a>
+    </div>
+
+  <div data-role="footer" >
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+</div>
+
+ <!--Page 4 --> 
+  <div data-role="page" id="Page4">
+
+    <div data-role="header" data-theme="a">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Temp settled</h2>
+    </div>
+
+    <div data-role="content" data-theme="a" id="Page4_Content">
+      <p class="infotexttitle">Continued Treatment:</p>
+      <p class="infotext">Review planned duration of antimicrobial treatment (see option d in link below)</p>
+
+       <a href="#Page8" data-role="button" data-mini="true" rel='external'>Reccommended Treatment</a>
+    </div>
+
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+
+</div>
+
+ <!--Page 5 --> 
+  <div data-role="page" data-theme="hse_top" id="Page5">
+
+    <div data-role="header" data-theme="a">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Temp hasn't settled</h2>
+    </div>
+
+    <div data-role="content" data-theme="a" id="Page5_Content">
+      <p class="infotexttitle">Continued Treatment:</p>
+      <p class="infotext">￼Ongoing pyrexia after 48 hours, add <b>caspofungin</b> 70mg iv stat, then 50mg iv od if &lt; 80 kg (70mg iv od if >80 kg). Consider HRCT thorax and removal of any lines <i>in situ</i></p>
+
+      Temperature Settles:
+      <a href="#Page6" data-role="button" data-mini="true" rel='external'>Yes</a>
+   
+
+      <a href='#Page7' data-role='button' data-mini='true' rel='external'>No</a>
+    </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+
+</div>
+
+ <!--Page 6 --> 
+  <div data-role="page" data-theme="hse_top" id="Page6">
+
+    <div data-role="header" data-theme="a">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Temp Settled</h2>
+    </div>
+
+    <div data-role="content" data-theme="a" id="Page6_Content">
+      <p class="infotexttitle">Continued Treatment:</p>
+      <p class="infotext">Review planned duration of antimicrobial treatment (see option d in link below)</p>
+
+       <a href="#Page8" data-role="button" data-mini="true" rel='external'>Reccommended Treatment</a>
+    </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+</div>
+
+ <!--Page 7 --> 
+  <div data-role="page" id="Page7">
+
+    <div data-role="header" data-theme="a">
+      <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+      <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+      <h2>Temp hasn't settled</h2>
+    </div>
+
+    <div data-role="content" data-theme="a" id="Page7_Content">
+      <p class="infotexttitle">Continued Treatment:</p>
+      <p class="infotext">Ongoing pyrexia, consideration should be given to other infective causes (see option c in link below)</p>
+
+       <a href="#Page8" data-role="button" data-mini="true" rel='external'>Reccommended Treatment</a>
+    </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+
+</div>
+
+ <!--Page 8 --> 
+ <div data-role="page" id="Page8">
+
+  <div data-role="header" data-theme="a">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+    <h2>Actions</h2>
+  </div>
+
+  <div data-role="content" data-theme="a" id="Page8_Content">
+    <p class="infotexttitle">Reccomended Treatment:</p>
+    <p class="infotexttitle">a) :</p>
+    <p class="infotext">Penicillin allergy or history of ESBL: substitute with <b>meropenem</b> 1g iv tds. Patient must be closely observed, for evidence of drug reaction, during and after first and second doses.</p>
+    <p class="infotexttitle">b) :</p>
+    <p class="infotext">Regular serum assays and dose adjustment in renal impairment are required for patients on <b>aminoglycosides or vancomycin.</b></p>
+    <p class="infotexttitle">c) <b>Persistent fever</b>:</p>
+    <p class="infotext">If fever persists despite antibacterial and antifungal therapy contact microbiologist for advice. Consider other infective causes such as:
+
+      • <u>CMV</u> infection - CMV can present as pneumonitis, gastrointestinal or CNS symptoms. These patients should have an EDTA blood sample collected together with BAL and biopsy (as appropriate clinically) sent for CMV PCR. Treatment is with <b>ganciclovir</b> 5mg/kg/12 hourly (dose adjustment in renal impairment).
+      <br><br>
+      • <u>Herpes simplex virus</u> (HSV) and <u>varicella zoster (VZ)</u> – can present as vesicular or ulcerative lesions. Add <b>aciclovir</b> 5mg/kg tds iv for HSV, 10mg/kg tds iv for VZ infection. For early lesions if not widespread or haemorrhagic consider oral aciclovir 400 mg five times a day for HSV, 800 mg five times a day for VZ.
+      <br><br>
+      • Respiratory viruses eg. <u>RSV</u>, <u>influenza</u>, <u>adenovirus</u> etc. - nasopharyngeal aspirate should be sent for immunofluoresence and viral culture. Contact microbiologist if positive.
+      <br><br>
+      • Sinus tenderness or nasal ulcerative lesions – suspect fungal infection e.g. <u>aspergillus</u> or <u>zygomycetes</u> such as mucor. Contact microbiologist if suspected.
+      <br><br>
+      • <u><i>Pneumocystis jirovecii</i> (<i>carinii</i>) pneumonia (PCP)</u> - these patients should have BAL sent for PCP staining and if indicated treatment with <b>co-trimoxazole</b>, 120 mg/kg/daily in 2-4 divided doses (dose adjustment in renal impairment).
+
+    <p class="infotexttitle">d) <b>Discontinuing Antibiotics</b>:</p>
+    <p class="infotext">
+      • In those patients where cultures are negative and non-infective causes of pyrexia are considered more likely, antibiotics may be discontinued after 5 days, or sometimes earlier if: the fever has resolved for >48 hours, the patient is clinically well and especially, if the neutrophil count has risen to >0.5x109/L.
+      <br><br>
+      • In those patients in whom an infective cause is likely but has not been identified, continue antibiotics for up to 10 days treatment in total, or until neutrophil count >0.5x109/L.
+      <br><br>
+      • If no organisms have been isolated, and the patient is apyrexial, when the neutrophil count has recovered, oral antibiotics are not usually necessary.
+    </div>
+
+    <a href="welcome.html" data-role="button" data-mini="true" rel='external'>Main Menu</a> <br>
+
+
+    <div data-role="footer" data-theme="a">
+      <h2>(c) Darragh O'Connor </h2>
+    </div>
+
+  </div>
+
+</body>            
+
+</html>
