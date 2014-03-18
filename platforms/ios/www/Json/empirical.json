@@ -2,7 +2,7 @@
  "tcontent": [{
  
   "Name": "Septicaemia",
-  "url":"<a href='empirical_septicaemia.html'>",
+  "url":"<a href='empirical/empirical_septicaemia.html'>",
   "image":"<div class='grid' style='background-image:url(img/anatomy/septicaemia.jpg);'>",
   "Variations": [{
       "condition":"Community-acquired in previously healthy patient, (excluding abdominal or pelvic source)",
@@ -31,7 +31,7 @@
    }, {
  
   "Name": "Infective Endocarditis (IE) (pending blood culture results)",
-  "url":"<a href='empirical_ie.html'>",
+  "url":"<a href='empirical/empirical_ie.html'>",
   "image":"<div class='grid' style='background-image:url(img/anatomy/endocarditis.jpg);'>",
    "Variations": [{
       "condition":"Native Valve Acute presentation",
@@ -61,7 +61,7 @@
   }, {
  
   "Name": "Central Nervous System Infections",
-  "url":"<a href='empirical_cns.html'>",
+  "url":"<a href='empirical/empirical_cns.html'>",
   "image":"<div class='grid' style='background-image:url(img/anatomy/cns.jpg);'>",
    "Variations": [{
       "condition":"Probable bacterial meningitis (Adults). <br> However if <i>Listeria monocytogenes</i> suspected (immunocompromised, elderly, pregnancy, etc) see additional info in Antimicrobial section.",
@@ -97,7 +97,7 @@
   }, {
  
   "Name": "Skin and Soft Tissue Infections",
-  "url": "<a href='empirical_skin.html'>",
+  "url": "<a href='empirical/empirical_skin.html'>",
   "image":"<div class='grid' style='background-image:url(img/anatomy/skin.jpg);'>",
    "Variations": [{
       "condition":"Erysipelas",
@@ -166,7 +166,7 @@
   }, {
  
   "Name": "Diabetic patients with foot infections",
-  "url": "<a href='empirical_diabetic.html'>",
+  "url": "<a href='empirical/empirical_diabetic.html'>",
   "image":"<div class='grid' style='background-image:url(img/anatomy/foot.jpg);'>",
    "Variations": [{
       "condition":"Infected superficial ulcer",
@@ -203,7 +203,7 @@
   }, {
  
   "Name": "Bone and Joint Infections",
-  "url": "<a href='empirical_bone.html'>",
+  "url": "<a href='empirical/empirical_bone.html'>",
    "Variations": [{
       "condition":"Acute Osteomyelitis",
       "organisms":"<i>S. aureus,</i> ß- Haemolytic Streptococcus (predominantly Groups A, C and G)",
@@ -245,7 +245,7 @@
   }, {
  
   "Name": "Intravascular Line Infections",
-  "url": "<a href='empirical_intravasular.html'>",
+  "url": "<a href='empirical/empirical_intravasular.html'>",
    "Variations": [{
       "condition":"<br><u>Clinical Condition: </u>",
       "organisms":"<br><u>Likely Organisms: </u>",
@@ -273,7 +273,7 @@
   }, {
  
   "Name": "Urinary Tract Infections",
-  "url": "<a href='empirical_uti.html'>",
+  "url": "<a href='empirical/empirical_uti.html'>",
   "image":"<div class='grid' style='background-image:url(img/anatomy/urinary.jpg);'>",
    "Variations": [{
       "condition":"<br><u>Clinical Condition: </u>",
@@ -302,7 +302,7 @@
   }, {
  
   "Name": "Respiratory Tract Infections",
-  "url": "<a href='empirical_rti.html'>",
+  "url": "<a href='empirical/empirical_rti.html'>",
   "image":"<div class='grid' style='background-image:url(img/anatomy/respiratory.jpg);'>",
    "Variations": [{
       "condition":"<br><u>Clinical Condition: </u>",
@@ -331,7 +331,7 @@
   }, {
  
   "Name": "Gastrointestinal Infections",
-   "url": "<a href='empirical_gastro.html'>",
+   "url": "<a href='empirical/empirical_gastro.html'>",
    "image":"<div class='grid' style='background-image:url(img/anatomy/gastrointestinal.jpg);'>",
     "Variations": [{
       "condition":"<br><u>Clinical Condition: </u>",

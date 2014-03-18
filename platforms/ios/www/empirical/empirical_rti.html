@@ -23,7 +23,7 @@
     <div data-role="header" data-theme="c">
       <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
       <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
-      <h2>Intravascular Line Infections</h2>
+      <h2>Respiratory Tract Infections</h2>
   </div>
   <div data-role="content" data-theme="c" id="Page1_Content">
     <p class="infotext"><b>Clinical Condition:</b></p>
@@ -35,16 +35,16 @@
       var info="";
       var dpages="";
       var pageno=1;  
-      var imp= "Json/empirical.json";
+      var imp= "../Json/empirical.json";
       $.getJSON(imp, function(data) {
          $.each(data.tcontent, function(i, item) {
-            if(item.Name=='Intravascular Line Infections'){
+            if(item.Name=='Respiratory Tract Infections'){
                var search=item.Variations;
                $.each(search, function(j, subitem) {
 
-                info += '<a href="#Paged'+ pageno + ' " data-role="button" data-mini="true">'+ subitem.condition +'</a><br>';
+                info += '<a href="#rti'+ pageno + ' " data-role="button" data-mini="true">'+ subitem.condition +'</a><br>';
 
-                dpages += '<div data-role="page"  data-theme="a" id="Paged' + pageno + '"> <div data-role="header" data-theme="c"><a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back</a> <h2>'+ subitem.condition +'</h2> </div> <div data-role="content" data-theme="c" id="Paged '+ pageno +'_Content">  <p class="infotexttitle">Likely Organisms: </p> ' + subitem.organisms + ' <p class="infotexttitle"> Antimicrobial & Dosage </p> ' + subitem.antimicrobial + '  <p class="infotexttitle"> Alternative Antimicrobial: </p> ' + subitem.alternative + ' <div data-role="collapsible" data-mini="true" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right" data-theme="d" data-content-theme="d"> <h3> Comments: </h3> <p class="guidelinetext"> ' + subitem.comments + ' </p></div> </div> <div data-role="footer" data-theme="c"> <h2>(c) Darragh O Connor </h2></div> </div></div>';
+                dpages += '<div data-role="page"  data-theme="a" id="rti' + pageno + '"> <div data-role="header" data-theme="c"><a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back</a> <h2>'+ subitem.condition +'</h2> </div> <div data-role="content" data-theme="c" id="rti'+ pageno +'_Content">  <p class="infotexttitle">Likely Organisms: </p> ' + subitem.organisms + ' <p class="infotexttitle"> Antimicrobial & Dosage </p> ' + subitem.antimicrobial + '  <p class="infotexttitle"> Alternative Antimicrobial: </p> ' + subitem.alternative + ' <div data-role="collapsible" data-mini="true" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right" data-theme="d" data-content-theme="d"> <h3> Comments: </h3> <p class="guidelinetext"> ' + subitem.comments + ' </p></div> </div> <div data-role="footer" data-theme="c"> <h2>(c) Darragh O Connor </h2></div> </div></div>';
 
 
 
