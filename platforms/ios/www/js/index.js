@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+var landing = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -31,9 +31,9 @@ var app = {
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
+    // function, we must explicity call 'landing.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        landing.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +47,6 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+//var stop=false;
+

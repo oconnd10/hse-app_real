@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Landing Page</title>
+      <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css" />  
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
+  </head>
+
+     <body>
+          <div data-role="page" data-theme="a" id="Page1">
+
+            <div data-role="header" data-theme="c">
+              <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+                <a href="info.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="info"> Info </a>
+                <h2>Empirical Guidlines</h2>
+            </div>
+
+            <div data-role="content" data-theme="c" id="Page1_Content">
+            <div id="empTOC" class="ui-grid-b">
+              
+            </div>
+
+            <script type="text/javascript">
+
+            var grid= new Array();
+            grid[0]= "a";
+            grid[1]= "b";
+            grid[2]= "c";
+            var j=0;
+
+            var color= new Array();
+            color[0]= '#00c6c4;';
+            color[1]= '#6fc41b;';
+            color[2]= '#ffbd0c;';
+            color[3]= '#ff84f1;';
+            color[4]= '#1fbbff;';
+            color[5]= '#ff1700;';
+            color[6]= '#976833;';
+            var k=0;
+
+
+            $(document).on("pageinit", "#Page1", function(){
+
+
+              var imp= "Json/empirical.json";
+              $.getJSON(imp, function(data) {
+               j=0;
+               k=0;
+               var toc= '';
+               $.each(data.tcontent, function(index, item) {
+                if (j > 2) { j = 0; }
+                if (k > 6) { k = 0; }
+                toc += "<div class='ui-block- ' " + grid[j] + " '>" + item.url + '<div class="grid" style="background-color: ' + color[k] + ' ">' + "<p class='gridtext'>"  + item.Name  + "</p>" +  "</div>" + "</a>" + "</div>"
+                j++;
+                k++;
+              });
+               $("#empTOC").empty().append(toc);
+             });
+            });
+
+
+            </script> 
+
+          </div>
+
+            <div data-role="footer" data-theme="c">
+                <h2>(c) Darragh O'Connor </h2>
+            </div>
+
+
+        </div>
+        
+     
+    </body>            
+ 
+</html>

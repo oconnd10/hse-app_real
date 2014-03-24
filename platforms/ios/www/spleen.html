@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+
+ <html>
+ <head>
+  <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link rel="stylesheet" href="css/themes/hse.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css" />  
+  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+ <!--Page 1 --> 
+ <div data-role="page" id="spleen_Page1">
+
+  <div data-role="header" data-theme="a">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="welcome.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="home"> Home </a>
+    <h2>Spleen</h2>
+  </div>
+
+  <div data-role="content" data-theme="a" id="Page1_Content">
+    <div id="spleen" data-role="collapsible-set">
+    </div>
+
+
+    <script type="text/javascript">
+
+
+    $(document).on("pageinit", "#spleen_Page1", function(){ 
+      var info="";  
+      var imp= "Json/spleen.json";
+      $.getJSON(imp, function(data) {
+
+        $.each(data.Slpeen, function(index, item) {
+          info += "<div data-role='collapsible' data-mini='true'> <h3>" + item.Name + "</h3> <p class='infotext'>"  + item.Details  + "</p></div>";
+        });
+
+        $("#spleen").empty().append(info).collapsibleset();
+      });
+    });
+
+
+    </script> 
+    <br><br>
+    <a href="#Spleen_Prophylaxis" data-role="button" data-mini="true" rel='external'>Prophylaxis for patients following splenectomy</a>
+    <a href="#Spleen_Vaccinations" data-role="button" data-mini="true" rel='external'>Reccommended Vaccinations</a>
+
+  </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+</div>
+
+<!--Page 2 --> 
+<div data-role="page" id="Spleen_Vaccinations">
+
+  <div data-role="header" data-theme="a">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="welcome.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="home"> Home </a>
+    <h2>Vaccines</h2>
+  </div>
+
+  <div data-role="content" data-theme="a" id="Spleen_Vaccinations">
+
+    <div id="Vaccinations" data-role="collapsible-set">
+    </div>
+
+
+ <script type="text/javascript">
+
+
+    $(document).on("pageinit", "#Spleen_Vaccinations", function(){ 
+      var info="";  
+      var imp= "Json/spleen.json";
+      $.getJSON(imp, function(data) {
+
+        $.each(data.Vaccinations, function(index, item) {
+          info += "<div data-role='collapsible' data-mini='true'> <h3>" + item.Vaccine + "</h3> <p class='infotexttitle'>Licenced Dose and Administration for adults</p> <p class='infotext'>"  + item.Dose  + "</p> <br> <p class='infotexttitle'>Re-immunisation required</p> <p class='infotext'> " + item.immunisation +  "</p> <p class='infotexttitle'>Live?</p> <p class='infotext'>" + item.live + "</p></div>";
+        });
+
+
+        $("#Vaccinations").empty().append(info).collapsibleset();
+      });
+    });
+
+
+    </script> 
+
+  </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+
+</div>
+
+<!--Page 3 --> 
+<div data-role="page" id="Spleen_Prophylaxis">
+
+  <div data-role="header" data-theme="a">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="welcome.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="home"> Home </a>
+    <h2>Prophylaxis</h2>
+  </div>
+
+  <div data-role="content" data-theme="a" id="Page3_Content">
+    <p class="infotexttitle">Prophylaxis for patients following splenectomy</p>
+    <p class="infotext">Prophylaxis with antibiotics is usually life-long. It is especially important in the first 2 years post splenectomy.</p>
+
+    Antibiotic Options:
+    <div id="Prophylaxis" data-role="collapsible-set">
+    </div>
+
+
+    <script type="text/javascript">
+
+
+    $(document).on("pageinit", "#Spleen_Prophylaxis", function(){ 
+      var info="";  
+      var imp= "Json/spleen.json";
+      $.getJSON(imp, function(data) {
+
+        $.each(data.Prophylaxis, function(index, item) {
+          info += "<div data-role='collapsible' data-mini='true'> <h3>" + item.Options + "</h3> <p class='infotext'>"  + item.Dose  + "</p></div>";
+        });
+
+
+        $("#Prophylaxis").empty().append(info).collapsibleset();
+      });
+    });
+
+
+    </script> 
+
+    <p class="infotext"><b><u>Patient Counselling – infective symptoms</b></u><br>Please inform the patient that should infective symptoms of raised temperature, malaise, or shivering develop, the patient should seek immediate medical help.</p>
+
+  </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2>(c) Darragh O'Connor </h2>
+  </div>
+
+</div>
+
+</body>            
+
+</html>

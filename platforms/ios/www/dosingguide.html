@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css" />  
+  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+ <div data-role="page" data-theme="a" id="Page1">
+
+  <div data-role="header" data-theme="a">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="welcome.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="home"> Home </a>
+    <h2>Aminoglycoside and Glycopeptide dosing and monitoring</h2>
+  </div>
+
+  <div data-role="content" data-theme="hse" id="Page1_Content">
+    <div id="set" data-role="collapsible-set">
+
+    </div>
+
+    <script type="text/javascript">
+
+
+    $(document).on("pageinit", "#Page1", function(){
+
+
+      var imp= "Json/dosing.json";
+      $.getJSON(imp, function(data) {
+
+       var toc= '';
+       $.each(data.Dosing, function(index, item) {
+        toc += "<div data-role='collapsible' data-mini='true'> <h3>" + item.Name + "</h3> <p class='infotext'>"  + item.Details  + "</p> </div>"
+      });
+
+       $("#set").empty().append(toc).collapsibleset();
+     });
+    });
+
+
+
+    </script> 
+
+
+    <p><a href="#dosetwo" data-role="button" rel="external" data-mini="true">Dosing Calculator</a></p>
+
+
+  </div>
+
+  <div data-role="footer" data-theme="a">
+    <h2><p ="infotext">(c) Darragh O'Connor</p> </h2>
+  </div>
+
+</div>
+
+<div data-role="page" data-theme="a" id="dosetwo">
+
+  <div data-role="header" data-theme="a">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="welcome.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="home"> Home </a>
+    <h2>Calculator</h2>
+  </div>
+
+  <div data-role="content" data-theme="a" id="dosetwo_Content">
+
+    Enter your data here for the calculator:
+    <form action="#" id="calc" method="get">
+      <div data-role="fieldcontain">
+
+        <label for="mini">Gender (M/F):</label>
+        <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" id="Gender">
+          <input type="radio" name="radio-gender" id="radio-mini-1" value="1.23" checked="checked" />
+          <label for="radio-mini-1">Male</label>
+
+          <input type="radio" name="radio-gender" id="radio-mini-2" value="1.04"  />
+          <label for="radio-mini-2">Female</label>
+        </fieldset>
+        <label for="number">Weight: (kg)</label>
+        <input type="number" name="number" id="Weight" value=""  data-mini="true" placeholder="Weight (kg)"/>
+
+        <label for="number">Age:</label>
+        <input type="number" name="number" id="Age" value="" data-mini="true" placeholder="Age (yrs)"/>
+
+        <label for="number">Creatinine: (ųmol/L)</label>
+        <input type="number" name="number" id="Creatinine" value="" data-mini="true" placeholder="Creatinine (ųmol/L)"/>
+
+        <label for="number">Height: (inches)</label>
+        <input type="number" name="number" id="Height" value=""  data-mini="true" placeholder="Height (inches)"/>
+
+        <label for="number">Is anuric/oliguric (output &lt;500mls/day)?</label>
+                <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" id="Gender">
+          <input type="radio" name="radio-anuric" id="radio-mini-1" value="N" checked="checked" />
+          <label for="radio-mini-1">No</label>
+
+          <input type="radio" name="radio-anuric" id="radio-mini-2" value="Y"  />
+          <label for="radio-mini-2">Yes</label>
+        </fieldset>
+
+
+
+
+
+      </div>
+
+      <div class="ui-body ui-body-b">
+        
+        
+          <button type="button" id="Calculate"  data-theme="d" data-mini="true">Calculate</button>
+         
+
+        <div class="containing-element">
+  <select name="flag" id="flag" data-role="slider">
+    <option value="Gentamicin">Gentamicin</option>
+    <option value="Vancomycin">Vancomycin</option>
+  </select>
+</div>
+      </div>
+    </form>
+
+
+    <label for="ans">Answer:</label>
+    <div id="ans" class="anstext">
+    </div>
+
+    <div id="additional">
+    </div>
+
+    <script type="text/javascript">
+
+$("#Calculate").click(function() {
+
+  var S_Age = $("#Age").val();
+  var Age = parseFloat(S_Age);
+  var S_Weight = $("#Weight").val();
+  var Weight = parseFloat(S_Weight);
+  var S_Height = $("#Height").val();
+  var Height = parseFloat(S_Height);
+  var S_Creatinine= $("#Creatinine").val();
+  var Creatinine = parseFloat(S_Creatinine);
+  var anuric;
+  var A_radios = document.getElementsByName("radio-anuric");
+  var i;
+
+  var S_Gender;
+      for (i = 0; i < A_radios.length; i++) {       
+        if (A_radios[i].checked) {
+            anuric =(A_radios[i].value);
+          }
+        }
+
+  var Gender=0;
+
+  var G_radios = document.getElementsByName("radio-gender");
+      for (i = 0; i < G_radios.length; i++) {       
+        if (G_radios[i].checked) {
+            S_Gender =(G_radios[i].value);
+          }
+        }
+  Gender= parseFloat(S_Gender);
+
+
+  var M_Height=Height/39.370;
+  var BMI = Weight/(M_Height*M_Height);
+  var IBW=0;
+  var diff=0;
+
+  if(BMI>30){
+    if(Gender==1.23){
+     if(Height>60){
+      diff=Height-60;
+      IBW=50+(2.3*diff);
+    }else{IBW=50;}
+  }else if(Gender==1.04){
+    if(Height>60){
+      diff=Height-60;
+      IBW=45.5+(2.3*diff);
+    }else{IBW=50;}
+  }else{
+    alert("Gender isn't working");
+  }
+  Weight=IBW + (0.4*(Weight-IBW));
+}
+
+
+
+var CrCl= 0;
+CrCl=(((140-Age)*Weight*Gender)/Creatinine);
+CrCl=CrCl.toFixed(4);
+
+
+var Answer;
+
+Answer="Creatinine Clearance = " + CrCl + "ml/min <br> BMI = " + BMI;
+var additional="";
+
+
+
+var gent_ans;
+
+if(anuric=="Y" || anuric=="y"){
+  gent_ans="<br><br>First dose of Gentamicin is between " (Weight*1) + "mg and " + (Weight*2) + "mg. Redose when level <1mg/L";
+
+}else if(anuric=="N" || anuric=="n"){
+  if(CrCl>=30 && CrCl<=50){
+    gent_ans="<br><br>First dose of Gentamicin is: " + (Weight*3) + "mg";
+  }else if(CrCl>=10 && CrCl<=30){
+    gent_ans="<br><br>First dose of Gentamicin is: " + (Weight*2) + "mg";
+  }else if(CrCl<10){
+    gent_ans="<br><br>First dose of Gentamicin is between " (Weight*1) + "mg and " + (Weight*2) + "mg. Redose when level <1mg/L";                
+  }else{
+    gent_ans="<br><br>First dose of Gentamicin is: " + (Weight*5) + "mg";
+  }
+}else{
+  alert("Anuric Level was not clearly defined!");
+}
+
+
+var gent_add;
+
+gent_add="<br>1st level 16-18hours after first dose. <br><a href='#Gent_Info' data-role='button' data-mini='true' data-rel='external'>Further Gentamicin dosing Information</a> ";
+
+
+//Vancomycin Function
+
+var vanc_ans;
+
+if(anuric=="Y" || anuric=="y"){
+  vanc_ans="<br><br>Vancomycin dose is between " (Weight*15) + "mg every 72-96hours. Check 1st level before 2nd dose. Hold dose untill level available.<br> 1st level 16-18hours after first dose.";
+
+}else if(anuric=="N" || anuric=="n"){
+  if(CrCl>=40 && CrCl<=60){
+    vanc_ans="<br><br>Vancomycin dose is: " + (Weight*15) + "mg od. Check 1st level before 3rd dose.<br> .";
+  }else if(CrCl>=20 && CrCl<=40){
+    vanc_ans="<br><br>Vancomycin dose is: " + (Weight*15) + "mg every 36-48hours. Check 1st level before 2nd dose.<br>.";
+  }else if(CrCl<20){
+    vanc_ans ="<br><br>Vancomycin dose is between " (Weight*15) + "mg every 72-96hours. Check 1st level before 2nd dose. Hold dose untill level available.<br>.";                
+  }else{
+    vanc_ans="<br><br>First dose of Vancomycin is a loading dose of: " + (Weight*15) + "mg. <br>Otherwise if your patient is seriously ill(signs of sever sepsis) give a loading dose of <b> " + (Weight*25) + "-" + (Weight*30) + "mg </b>.<br><br> Then prescribe maintenance dose of " + (Weight*15) + "mg bi-daily. (Preferably at 10am, and 10pm to facilitate levels).<br><br> 1st level before 4th or 5th dose. (Level needs to be PRE-dose, or at least within one hour of giving dose)";
+  }
+}else{
+  alert("Anuric Level was not clearly defined!");
+}
+
+var vanc_add;
+
+vanc_add="<br><a href='#Vanc_Info' data-role='button' data-mini='true'>Further Vancomycin dosing Information";
+
+
+if($("#flag").val()=="Gentamicin"){
+Answer+=gent_ans;
+additional+=gent_add;
+}else{
+Answer+=vanc_ans;
+additional+=vanc_add;
+}
+$("#ans").empty().append(Answer);
+$("#additional").empty().append(additional).trigger('create');
+ 
+
+});
+
+</script> 
+
+
+
+</div>
+
+<div data-role="footer" data-theme="c">
+  <h2>(c) Darragh O'Connor </h2>
+</div>
+
+</div>
+
+<div data-role="page" data-theme="a" id="Gent_Info">
+
+  <div data-role="header" data-theme="c">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="welcome.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="home"> Home </a>
+    <h2>Further Gentamicin Info</h2>
+  </div>
+
+  <div data-role="content" data-theme="c" id="Page3_Content">
+
+
+   <div class="images"><img src="img/gentamicin.png"></img> </div>
+
+
+
+
+   <script type="text/javascript">
+
+   </script> 
+
+ </div>
+
+ <div data-role="footer" data-theme="c">
+  <h2>(c) Darragh O'Connor </h2>
+</div>
+
+
+</div>
+
+<div data-role="page" data-theme="a" id="Vanc_Info">
+
+  <div data-role="header" data-theme="c">
+    <a data-rel="back" data-role="button" class="ui-btn-left" data-transition="flip" data-icon="back"> Back </a>
+    <a href="welcome.html" data-role="button" class="ui-btn-right" data-transition="flip" data-icon="home"> Home </a>
+    <h2> Further Vancomycin Info</h2>
+  </div>
+
+  <div data-role="content" data-theme="c" id="Page4_Content">
+    <p>Note: Unless renal function is deteriorating or specifically advised <span style="color:red">DOESES SHOULD NOT BE HELD WHILST AWAITING LEVELS</span><br><br>Please seek advice from Pharmacy or Clincial Microbiology if in doubt.</p>
+
+    <p>Has patient serious infection such as enocarditis, osteomyelitis, bloodstream infection, meninigitis or hospital acquired pneumonia caused by <i>S. aureus?</i><br>
+      <br>
+      <div data-role='collapsible' data-mini='true'> <h3> Yes</h3> <p> Target level is 15-20mg/L <br>Is level 15-20mg/L? <img src="img/yes_vancomycin.png"></img> </p> </div>
+      <div data-role='collapsible' data-mini='true'> <h3> No</h3> <p>Target level is 10-15mg/L.<br>Is level 10-15mg/L?<img src="img/no_vancomycin.png"></img> </p> </div>
+
+      <script type="text/javascript">
+
+
+      </script> 
+
+    </div>
+
+    <div data-role="footer" data-theme="c">
+      <h2>(c) Darragh O'Connor </h2>
+    </div>
+
+
+  </div>
+
+</body>            
+
+</html>
