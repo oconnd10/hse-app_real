@@ -90,7 +90,32 @@
                     
                     <br>
                     <br>
-                    <a href="welcome.html" data-role="button" class="ui-btn-active"> Enter </a>
+                    <div data-role="fieldcontain">
+                    <label for="name">Username:</label>
+                     <input type="text" name="name" id="username" value=""  />
+                     <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" value="" />
+                    </div>  
+
+                    <button type="button" class="ui-btn-active" id="Enter"> Enter </button>
+
+                    <script type="text/javascript">
+
+                    $("#Enter").click(function() {
+                        var username = $("#username").val();
+                        var pass = $("#password").val();
+
+                        if(pass=="1234" && username=="connolly"){
+
+                            window.location.href="welcome.html";
+
+                        }else{
+                            alert("Username and Password Incorrect");
+                        }
+                    });
+
+
+                    </script>
     
 
                 </div>
