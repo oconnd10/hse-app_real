@@ -3,8 +3,7 @@
  
   "Name": "Septicaemia",
   "url":"<a href='empirical/empirical_septicaemia.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/septicaemia.jpg);'>",
-  "Variations": [{
+   "Variations": [{
       "condition":"Community-acquired in previously healthy patient, (excluding abdominal or pelvic source)",
       "organisms":"Staph. aureus, Strep. pneumoniae, Neisseria. meningitidis, Step. pyogenes (Group A strep), Occasionally Gram-negative bacilli.",
       "antimicrobial":"Flucloxacillin 2g iv qds <br> <b>Plus</b> <br> Cefotaxime 2g iv qds <br> +/- <br> Gentamicin 5mg/kg/day iv od",
@@ -32,7 +31,6 @@
  
   "Name": "Infective Endocarditis (IE) (pending blood culture results)",
   "url":"<a href='empirical/empirical_ie.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/endocarditis.jpg);'>",
    "Variations": [{
       "condition":"Native Valve Acute presentation",
       "organisms":"<i>Staphylococcus aureus</i>",
@@ -247,26 +245,26 @@
   "Name": "Intravascular Line Infections",
   "url": "<a href='empirical/empirical_intravasular.html'>",
    "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
+      "condition":"Peripheral line <i><b>No evidence of systemic sepsis</b> (i.e. soft tissue infection only)</i>",
+      "organisms":"<i>Staph. aureus </i>(MSSA and MRSA)",
+      "antimicrobial":"<b><u>Unknown aetiology or MRSA cultured from swab/line tip or patient colonised with MRSA</u></b><br>Doxycycline 100mg po bd",
+      "alternative":"",
+      "comments": "<u>Investigations:</u><br>Remove line, swab for culture and sensitivity if pus present at line site<br>Rationalise treatment based on culture result"
  
       }, {
  
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
+      "condition":"Peripheral line<br><b><i>Evidence of systemic sepsis</i></b>",
+      "organisms":"<i>Staph. aureus </i>(MSSA and MRSA)",
+      "antimicrobial":"Vancomycin 15mg/kg iv bd +/- Gentamicin 5mg/kg iv od (in setting of severe sepsis and/or fails to improve)<br><br><b>Duration:</b><br>5-7 days if blood cultures negative (minimum 14 days iv antibiotics if Staph. aureus bloodstream infection)",
+      "alternative":"",
+      "comments":"<u>Investigations:</u><br>Remove line, Blood cultures, swab for culture and sensitivity if pus present at line site <br><br>Rationalise treatment based on culture result<br><br> Echocardiogram +/- bone scan if <i>Staph. aureus</i> bloodstream infection"
  
       }, {
  
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
+      "condition":"Central venous catheter (CVC) infection",
+      "organisms":"<i>Coagulase negative staphylococci, Staph. aureus</i> (MSSA and MRSA)",
+      "antimicrobial":"Vancomycin 15mg/kg iv bd +/- Gentamicin 5mg/kg iv od (in setting of severe sepsis and/or fails to improve)<br><br><b>Duration</b><br>Coag neg staphs: 5-7 days if line removed (14 days if line remains in situ) Staph. aureus: 14 days minimum (>duration if evidence of metastatic seeding) Other organisms: discuss with microbiologist",
+      "alternative":"",
       "comments":"<br><u>Comments:</u>"
      }]
  
