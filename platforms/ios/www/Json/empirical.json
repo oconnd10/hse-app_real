@@ -60,7 +60,6 @@
  
   "Name": "Central Nervous System Infections",
   "url":"<a href='empirical/empirical_cns.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/cns.jpg);'>",
    "Variations": [{
       "condition":"Probable bacterial meningitis (Adults). <br> However if <i>Listeria monocytogenes</i> suspected (immunocompromised, elderly, pregnancy, etc) see additional info in Antimicrobial section.",
       "organisms":"<i>Neisseria meningitides Streptococcus pneumoniae</i>",
@@ -96,7 +95,6 @@
  
   "Name": "Skin and Soft Tissue Infections",
   "url": "<a href='empirical/empirical_skin.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/skin.jpg);'>",
    "Variations": [{
       "condition":"Erysipelas",
       "organisms":"<u>Group A ß-Haemolytic Streptococcus (Strep pyogenes)</u>",
@@ -165,7 +163,6 @@
  
   "Name": "Diabetic patients with foot infections",
   "url": "<a href='empirical/empirical_diabetic.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/foot.jpg);'>",
    "Variations": [{
       "condition":"Infected superficial ulcer",
       "organisms":"Predominantly gram- positive organisms (e.g. <i>Staphylococus aureus</i>, Beta haemolytic streptococci)",
@@ -243,7 +240,7 @@
   }, {
  
   "Name": "Intravascular Line Infections",
-  "url": "<a href='empirical/empirical_intravasular.html'>",
+  "url": "<a href='empirical/empirical_intravascular.html'>",
    "Variations": [{
       "condition":"Peripheral line <i><b>No evidence of systemic sepsis</b> (i.e. soft tissue infection only)</i>",
       "organisms":"<i>Staph. aureus </i>(MSSA and MRSA)",
@@ -265,72 +262,131 @@
       "organisms":"<i>Coagulase negative staphylococci, Staph. aureus</i> (MSSA and MRSA)",
       "antimicrobial":"Vancomycin 15mg/kg iv bd +/- Gentamicin 5mg/kg iv od (in setting of severe sepsis and/or fails to improve)<br><br><b>Duration</b><br>Coag neg staphs: 5-7 days if line removed (14 days if line remains in situ) Staph. aureus: 14 days minimum (>duration if evidence of metastatic seeding) Other organisms: discuss with microbiologist",
       "alternative":"",
-      "comments":"<br><u>Comments:</u>"
+      "comments":"<u>Investigations:</u><br>Peripheral and central blood cultures, <b>remove line,</b> line tip for culture and sensitivity, swab for culture and sensitivity if pus present at line site<br><br>Echocardiogram +/- bone scan if <i>Staph. aureus</i> bloodstream infection<br><br>Consider addition of antifungal agent in high risk patients. Discuss with microbiologist.<br><br>Rationalise treatment based on culture result"
      }]
  
   }, {
  
   "Name": "Urinary Tract Infections",
   "url": "<a href='empirical/empirical_uti.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/urinary.jpg);'>",
    "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
+      "condition":"Uncomplicated Cystitis",
+      "organisms":"<i>E. coli, Klebsiella spp, Proteus spp, Enterococcus spp., Pseudomonas spp.</i>",
+      "antimicrobial":"Trimethoprim 200mg po bd<br><u><b>OR</u></b><br>Nitrofurantoin 100mg po qds (avoid if renal function <60mL/minute) <br><u><b>OR</u></b><br> Cefalexin 500mg po tds <br><br> <u>Duration:</u><br>Females: 3 days<br> Males: 7 days <br> Note: Amoxicillin resistance is common, therefore ONLY use if culture confirms susceptibility",
+      "alternative":"",
+      "comments": "Send MSU before starting antibiotics. <br><br>In the elderly (>65 years), do not treat asymptomatic bacteriuria; it occurs in 25% of women and 10% of men and is not associated with increased morbidity. Asymptomatic bacteriuria should only be treated in pregnant females and men due to have a TURP within 24 hours<br><br>Contact Consultant Microbiologist if treating UTI in pregnancy<br><br>Review therapy when culture and sensitivity results available"
  
       }, {
  
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
+      "condition":"Pyelonephritis",
+      "organisms":"<i>E. coli, Klebsiella spp, Proteus spp, Enterococcus spp., Pseudomonas spp.</i>",
+      "antimicrobial":"Co-amoxiclav 1.2g iv tds<br>+/-<br>Gentamicin 5mg/kg iv od (use for 3-5 days only)<br><br><b>Duration</b>10-14 days",
+      "alternative":"<u>Penicillin allergy</u> (non anaphylaxis) Cefuroxime 1.5g iv tds<br>+/-<br>Gentamicin 5mg/kg iv od (use for 3-5 days only) <br><br><u>Penicillin allergy</u> (anaphylaxis) Ciprofloxacin 400mg iv bd<br> +/-<br> Gentamicin 5mg/kg iv od (use for 3-5 days only)",
+      "comments":"Send Blood cultures and MSU before starting antibiotics<br><br>Review therapy when culture and sensitivity results available"
  
       }, {
  
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
+      "condition":"Catheter-associated bacteriuria",
+      "organisms":"<i>E. coli, Klebsiella spp, Proteus spp, Enterococcus spp., Pseudomonas spp.</i>",
+      "antimicrobial":"See Comments",
+      "alternative":"",
+      "comments":"The urine of patients with indwelling catheters frequently becomes colonised with bacteria.<b> Treatment is not indicated</b> unless the patient becomes systemically unwell. Use urine culture results as a guide Removal of the catheter at the earliest possible time is recommended. For the vast majority of patient’s, antibiotic prophylaxis upon change, instrumentation or removal of catheter is not indicated. Exceptions include neutropenic patients, those at risk of IE, previous bacteraemia post change of urinary catheter."
+     }, {
+ 
+      "condition":"Acute epididymorchitis",
+      "organisms":"STI likely/possible</b><br><i>Chlamydia trachomatis, Neisseria gonorrhoea</i><br><br><b>STI unlikely</b><br>Enterobacteriacae (coliforms)",
+      "antimicrobial":"Doxycycline 100mg po bd <b>Plus</b> Ceftriaxone 250mg im STAT (additional therapy may include a quinolone if <i>N. gonorrhoea</i> unlikely)<br>Duration: 10-14 days<br><br>Ciprofloxacin 400mg iv/500mg po bd <b>Duration:</b> 10-14 days",
+      "alternative":"Azithromycin 1 g po STAT may be substituted for doxycycline in patients unable to take doxycycline or compliance likely to be an issue",
+      "comments":"<u>Investigations:</u> Blood Culture, MSU, +/- urethral swab, STI screen"
+     }, {
+ 
+      "condition":"Pelvic Inflammatory disease",
+      "organisms":"<i>Chlamydia trachomatis, Neisseria gonorrhoea, coliforms, anaerobes, streptococcus milleri</i>",
+      "antimicrobial":"<u>In patient:</u><br>Ceftriaxone 1g iv od <b><u>Plus</b></u> Doxycycline 100mg po bd <b><u>Plus</b></u> Metronidazole 400mg po tds<br><br><u>Out patient:</u><br>Doxycycline 100mg po bd <b><u>Plus</b></u> Metronidazole 400mg po tds <b><u>Plus</b></u> Ceftriaxone 250mg im STAT",
+      "alternative":"Azithromycin 1 g po STAT may be substituted for doxycycline in patients unable to take doxycycline or compliance likely to be an issue",
+      "comments":"<u>Investigations:</u><br>Blood culture, MSU, STI screen. For in-patients consider oral switch (to out- patient regimen of doxycycline and metronidazole) when symptoms settled and apyrexial for at least 48 hours<br><br>Contact tracing is recommended if STI documented. Refer to Gynaecology for advice"
      }]
  
   }, {
  
   "Name": "Respiratory Tract Infections",
   "url": "<a href='empirical/empirical_rti.html'>",
-  "image":"<div class='grid' style='background-image:url(img/anatomy/respiratory.jpg);'>",
    "Variations": [{
-      "condition":"<br><u>Clinical Condition: </u>",
-      "organisms":"<br><u>Likely Organisms: </u>",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage: </u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments": "<br><u>Comments: </u>"
+      "condition":"Acute pharyngitis/Tonsillitis",
+      "organisms":"Viruses<br><br>Group A beta-haemolytic streptococcus",
+      "antimicrobial":"No antibiotics<br><br><b>Oral Therapy:</b> Amoxicillin 500mg po tds<br><br><b>Parenteral Therapy:</b> Benzylpenicillin 1.2-2.4g iv qds<br><br><b>Duration:</b> 10 days",
+      "alternative":"<u>Penicillin Allergy:</u> Clarithromycin* 500mg po or iv bd<br><b>Or</b><br>Doxycycline 200mg po STAT then 100mg po bd",
+      "comments": "Most cases are viral.<br>Parenteral therapy indicated in severe cases.<br>Take a throat swab before starting antibiotics.<br>Relapse may occur if therapy is not continued for adequate duration.<br>Isolate patient for first 24h<br><b>*Clarithromycin and statins interact (risk of rhabdomyolysis). Some statins require temporary discontinuation (e.g simvastatin) and some require dose reduction (e.g atorvastatin to max. 20mg). If necessary, consult pharmacy for advice about this or other potential interactions.</b>"
  
       }, {
  
-      "condition":"<br><u>Clinical Condition:</u>",
-      "organisms":"<br><u>Likely Organisms:</u>",
-      "antimicrobial":"<br><u>Antimircobial & Dosage:</u>",
-      "alternative":"<br><u>Alternative Antimicrobial:</u> ",
-      "comments":"<br><u>Comments:</u>"
+      "condition":"Acute Otitis Media/ Acute Sinusitis",
+      "organisms":"Viruses<br><br><i>Haemophilus influenzae</i><br>Beta-haemolytic streptococci eg Groups A, C and G<br><i>Moraxella catarrhalis <br>Strep. pneumoniae</i> <br>Anaerobes",
+      "antimicrobial":"No antibiotics<br><br>Co-amoxiclav 625mg po tds or 1.2g iv tds<br><b>Or</b><br> Clarithromycin* 500mg po or iv bd.<br><br><b>Duration</b>7 days",
+      "alternative":"<u>Penicillin Allergy:</u> Clarithromycin* 500mg po or iv bd<br><b>Or</b><br>Doxycycline 200mg po STAT then 100mg po bd",
+      "comments":"<b>*Clarithromycin and statins interact (risk of rhabdomyolysis). Some statins require temporary discontinuation (e.g simvastatin) and some require dose reduction (e.g atorvastatin to max. 20mg). If necessary, consult pharmacy for advice about this or other potential interactions.</b>"
  
       }, {
  
-      "condition":"<br><u>Clinical Condition:</u> ",
-      "organisms":"<br><u>Likely Organisms:</u> ",
-      "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
-      "alternative":"<br><u>Alternative Antimicrobial:</u>",
-      "comments":"<br><u>Comments:</u>"
-     }]
+      "condition":"Acute Epiglotittis",
+      "organisms":"<i>Haemophilus influenzae</i><br>Group A Streptococcus",
+      "antimicrobial":"Cefotaxime 2g IV tds<br><br><b>Duration:</b> 5-7 days",
+      "alternative":"",
+      "comments":"Relatively uncommon in adults. Serious infection, Observe carefully. ITU Management may be required<br><br>Isolate patient for first 24h<br><br>Seek advice from ConsultantMicrobiologist"
+     }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }]
  
   }, {
  
   "Name": "Gastrointestinal Infections",
    "url": "<a href='empirical/empirical_gastro.html'>",
-   "image":"<div class='grid' style='background-image:url(img/anatomy/gastrointestinal.jpg);'>",
+   "image":"",
     "Variations": [{
       "condition":"<br><u>Clinical Condition: </u>",
       "organisms":"<br><u>Likely Organisms: </u>",
@@ -353,7 +409,71 @@
       "antimicrobial":"<br><u>Antimicrobial & Dosage:</u> ",
       "alternative":"<br><u>Alternative Antimicrobial:</u>",
       "comments":"<br><u>Comments:</u>"
-     }]
+     }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }, {
+ 
+      "condition":"",
+      "organisms":"",
+      "antimicrobial":"",
+      "alternative":"",
+      "comments":""
+ 
+      }]
  
     }]
    }
